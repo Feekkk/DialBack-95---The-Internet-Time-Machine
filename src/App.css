@@ -27,6 +27,37 @@ body {
   animation: backgroundShift 30s linear infinite;
 }
 
+/* Fix emoji colors - ensure they display in natural colors */
+body {
+  font-family: 'Comic Neue', cursive, Arial, sans-serif;
+  background: 
+    radial-gradient(circle at 25% 25%, #ff00ff 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, #00ffff 2px, transparent 2px),
+    radial-gradient(circle at 25% 75%, #ffff00 1px, transparent 1px),
+    radial-gradient(circle at 75% 25%, #00ff00 1px, transparent 1px),
+    linear-gradient(45deg, #e0e0ff 25%, #ffe0e0 25%, #ffe0e0 50%, #e0ffe0 50%, #e0ffe0 75%, #ffe0ff 75%);
+  background-size: 50px 50px, 50px 50px, 30px 30px, 30px 30px, 100px 100px;
+  background-position: 0 0, 25px 25px, 0 0, 15px 15px, 0 0;
+  color: #000080;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  animation: backgroundShift 30s linear infinite;
+}
+
+/* Ensure emojis display in their natural colors */
+* {
+  font-variant-emoji: emoji;
+}
+
+/* Force emoji fonts for better display */
+body, * {
+  font-family: 'Comic Neue', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiOne Color', cursive, Arial, sans-serif;
+}
+
 @keyframes backgroundShift {
   0% { background-position: 0 0, 25px 25px, 0 0, 15px 15px, 0 0; }
   100% { background-position: 50px 50px, 75px 75px, 30px 30px, 45px 45px, 100px 100px; }
