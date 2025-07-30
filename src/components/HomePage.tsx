@@ -168,11 +168,36 @@ function HomePage({ onNavigate }: HomePageProps) {
         <div className="links-section">
           <h3 className="rainbow-text">🔗 COOL CAT LINKS 🔗</h3>
           <div className="link-list">
-            <a href="#" className="nineties-link">Cat Chat Room</a>
-            <a href="#" className="nineties-link">Kitten Webcam</a>
-            <a href="#" className="nineties-link">Cat Ring</a>
-            <a href="#" className="nineties-link">Feline Forum</a>
-            <a href="#" className="nineties-link">Cat Counter</a>
+            <button 
+              className="nineties-link"
+              onClick={() => onNavigate('chat')}
+            >
+              Cat Chat Room
+            </button>
+            <button 
+              className="nineties-link"
+              onClick={() => onNavigate('webcam')}
+            >
+              Kitten Webcam
+            </button>
+            <button 
+              className="nineties-link"
+              onClick={() => onNavigate('ring')}
+            >
+              Cat Ring
+            </button>
+            <button 
+              className="nineties-link"
+              onClick={() => onNavigate('forum')}
+            >
+              Feline Forum
+            </button>
+            <button 
+              className="nineties-link"
+              onClick={() => onNavigate('counter')}
+            >
+              Cat Counter
+            </button>
           </div>
         </div>
 
