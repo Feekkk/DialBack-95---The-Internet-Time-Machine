@@ -7,6 +7,7 @@ function App() {
   const [showPopup, setShowPopup] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [currentPage, setCurrentPage] = useState('home')
   const [guestbookEntries, setGuestbookEntries] = useState([
     { name: "CatLover1995", message: "OMG this site is sooo COOL!!! I love the dancing cat! 😸" },
     { name: "KittyFan", message: "Your webpage is purrfect! 🐾 Can you add more cat GIFs?" },
@@ -88,6 +89,54 @@ function App() {
               width="100"
             />
           </div>
+        </div>
+      </div>
+    )
+  }
+
+  // About Us page (empty for now as requested)
+  if (currentPage === 'about') {
+    return (
+      <div className="nineties-container">
+        <div className="stars"></div>
+        
+        {/* Floating 90s shapes */}
+        <div className="floating-shapes">
+          <div className="shape shape-1">🔺</div>
+          <div className="shape shape-2">🔶</div>
+          <div className="shape shape-3">🔸</div>
+          <div className="shape shape-4">🟣</div>
+          <div className="shape shape-5">🔵</div>
+          <div className="shape shape-6">🟨</div>
+        </div>
+
+        {/* Header */}
+        <div className="header">
+          <h1 className="rainbow-text">
+            🐱 ABOUT CAT CENTRAL 🐱
+          </h1>
+          <p className="blink">Coming Soon!</p>
+        </div>
+
+        {/* Navigation back to home */}
+        <div className="navigation-section">
+          <button 
+            className="nineties-button"
+            onClick={() => setCurrentPage('home')}
+          >
+            🏠 BACK TO HOME 🏠
+          </button>
+        </div>
+
+        {/* Under Construction */}
+        <div className="construction">
+          🚧 PAGE UNDER CONSTRUCTION 🚧
+          <img 
+            src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" 
+            alt="Working cat"
+            width="50"
+          />
+          Check back soon!
         </div>
       </div>
     )
@@ -216,6 +265,31 @@ function App() {
             <a href="#" className="nineties-link">Cat Ring</a>
             <a href="#" className="nineties-link">Feline Forum</a>
             <a href="#" className="nineties-link">Cat Counter</a>
+          </div>
+        </div>
+
+        {/* About Us Navigation */}
+        <div className="about-us-section">
+          <h3 className="rainbow-text blink">📖 LEARN MORE ABOUT US! 📖</h3>
+          <p>Discover the purr-fect story behind Cat Central!</p>
+          <button 
+            className="nineties-button about-us-btn"
+            onClick={() => setCurrentPage('about')}
+          >
+            🐱 VISIT OUR ABOUT PAGE 🐱
+          </button>
+          <div className="about-preview">
+            <img 
+              src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" 
+              alt="Typing cat"
+              width="80"
+            />
+            <p className="blink">Click to learn our story!</p>
+            <img 
+              src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" 
+              alt="Dancing cat"
+              width="80"
+            />
           </div>
         </div>
 
